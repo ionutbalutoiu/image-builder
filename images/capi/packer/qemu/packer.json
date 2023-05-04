@@ -26,7 +26,7 @@
       "qemuargs": [
         [
           "-machine",
-          "virt,accel=kvm,gic-version=host"
+          "virt,accel=hvf"
         ],
         [
           "-cpu",
@@ -62,7 +62,7 @@
         ],
         [
           "-drive",
-          "file=/root/.cache/packer/1bb131b162f10e50ac7d8671a71f4a0e13e36197.iso,if=none,id=drive1,cache=writeback"
+          "file=/Users/ionutbalutoiu/.cache/packer/1bb131b162f10e50ac7d8671a71f4a0e13e36197.iso,if=none,id=drive1,cache=writeback"
         ],
         [
           "-device",
@@ -70,11 +70,11 @@
         ],
         [
           "-drive",
-          "file=/var/lib/libvirt/images/capi.fd,format=raw,if=pflash"
+          "file=/Users/ionutbalutoiu/Work/k8s-img-builder/capi.fd,format=raw,if=pflash"
         ],
         [
           "-drive",
-          "file=/var/lib/libvirt/images/capi-nvmram.fd,format=raw,if=pflash"
+          "file=/Users/ionutbalutoiu/Work/k8s-img-builder/capi-nvmram.fd,format=raw,if=pflash"
         ],
         "-usb",
         [

@@ -480,7 +480,7 @@ $(OPENSTACK_VALIDATE_TARGETS): deps-openstack
 	packer validate $(PACKER_NODE_FLAGS) -var-file="$(abspath packer/openstack/$(subst validate-openstack-,,$@).json)" $(ABSOLUTE_PACKER_VAR_FILES) packer/openstack/packer.json
 
 .PHONY: $(QEMU_BUILD_TARGETS)
-$(QEMU_BUILD_TARGETS): deps-qemu
+$(QEMU_BUILD_TARGETS):
 	packer build $(PACKER_NODE_FLAGS) -var-file="$(abspath packer/qemu/$(subst build-,,$@).json)" $(ABSOLUTE_PACKER_VAR_FILES) packer/qemu/packer.json
 
 .PHONY: $(QEMU_VALIDATE_TARGETS)
